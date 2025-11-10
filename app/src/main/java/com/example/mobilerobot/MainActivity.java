@@ -9,6 +9,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.firebase.Firebase;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -35,8 +36,8 @@ public class MainActivity extends AppCompatActivity /*implements
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String value = snapshot.getValue(String.class);
-                System.out.println("Success to read value : " + value);
+                FirebaseDataFormat value = snapshot.getValue(FirebaseDataFormat.class);
+                System.out.println("Success to read value : " + value.toString());
             }
 
             @Override
