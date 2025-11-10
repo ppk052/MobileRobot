@@ -37,5 +37,9 @@ dependencies {
     androidTestImplementation ('androidx.test.ext:junit:1.1.5')
     androidTestImplementation ('androidx.test.espresso:espresso-core:3.5.1')
 
+    //temi
     implementation ('com.robotemi:sdk:1.131.4')
+
+    //firebase realtime database
+    implementation 'com.google.firebase:firebase-database:22.0.1'
 }
